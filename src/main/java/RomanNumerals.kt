@@ -1,6 +1,7 @@
 class RomanNumerals {
     fun convert(number: Int): String {
         val numbers = linkedMapOf<Int, String>(
+            90 to "XC",
             50 to "L",
             40 to "XL",
             10 to "X",
