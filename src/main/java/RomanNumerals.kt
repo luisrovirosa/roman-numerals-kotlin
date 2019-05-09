@@ -1,16 +1,16 @@
 class RomanNumerals {
     fun convert(number: Int): String {
         val numbers = linkedMapOf<Int, String>(
-            1 to "I",
-            4 to "IV",
-            5 to "V",
+            10 to "X",
             9 to "IX",
-            10 to "X"
+            5 to "V",
+            4 to "IV",
+            1 to "I"
         )
         if (numbers.contains(number)) {
             return numbers.get(number)!!
         }
-        for (i in numbers.keys.reversed()){
+        for (i in numbers.keys){
             if (number > i) {
                 return numbers.get(i) + convert(number - i)
             }
