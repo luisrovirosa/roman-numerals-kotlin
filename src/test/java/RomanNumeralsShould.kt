@@ -6,6 +6,7 @@ class RomanNumeralsShould {
     @ParameterizedTest
     @CsvSource(
         "1, I",
+        "3, III",
         "2, II"
     )
     fun `return I for number 1`(number: Int, expectedValue: String){

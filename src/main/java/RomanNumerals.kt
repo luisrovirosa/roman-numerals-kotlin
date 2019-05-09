@@ -3,7 +3,9 @@ class RomanNumerals {
         if (number == 1){
             return "I"
         }
-        return "II"
+        if (number == 2)
+            return "II"
+        return "III"
     }
 
 }
