@@ -3,7 +3,8 @@ class RomanNumerals {
         val numbers = hashMapOf<Int, String>(
             1 to "I",
             4 to "IV",
-            5 to "V"
+            5 to "V",
+            9 to "IX"
         )
         if (numbers.contains(number)) {
             return numbers.get(number)!!
