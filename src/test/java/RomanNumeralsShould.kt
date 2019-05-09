@@ -5,7 +5,8 @@ import kotlin.test.assertEquals
 class RomanNumeralsShould {
     @ParameterizedTest
     @CsvSource(
-        "1, I"
+        "1, I",
+        "2, II"
     )
     fun `return I for number 1`(number: Int, expectedValue: String){
         val converter = RomanNumerals()
