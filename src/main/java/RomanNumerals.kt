@@ -17,7 +17,7 @@ class RomanNumerals {
         )
         for (i in numbers.keys){
             if (number >= i) {
-                return numbers.get(i) + convert(number - i)
+                return numbers[i] + convert(number - i)
             }
         }
         return ""
