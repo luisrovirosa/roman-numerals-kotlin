@@ -1,6 +1,6 @@
 class RomanNumerals {
     fun convert(number: Int): String {
-        val numbers = hashMapOf<Int, String>(
+        val numbers = linkedMapOf<Int, String>(
             1 to "I",
             4 to "IV",
             5 to "V",
@@ -11,12 +11,12 @@ class RomanNumerals {
             return numbers.get(number)!!
         }
         if (number > 10) {
-            return "X" + convert(number - 10)
+            return numbers.get(10) + convert(number - 10)
         }
         if (number > 5) {
-            return "V" + convert(number - 5)
+            return numbers.get(5) + convert(number - 5)
         }
-        return "I" + convert(number - 1)
+        return numbers.get(1) + convert(number - 1)
     }
 
 
