@@ -10,14 +10,14 @@ class RomanNumerals {
         if (numbers.contains(number)) {
             return numbers.get(number)!!
         }
-        if (number > 10) {
-            return numbers.get(10) + convert(number - 10)
+        for (i in numbers.keys.reversed()){
+            if (number > i) {
+                return numbers.get(i) + convert(number - i)
+            }
         }
-        if (number > 5) {
-            return numbers.get(5) + convert(number - 5)
-        }
-        return numbers.get(1) + convert(number - 1)
+        return ""
     }
+
 
 
 }
