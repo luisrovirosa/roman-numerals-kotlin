@@ -3,15 +3,15 @@ class RomanNumerals {
         val numbers = hashMapOf<Int, String>(
             1 to "I",
             4 to "IV",
-            5 to "V",
-            6 to "VI",
-            7 to "VII",
-            8 to "VIII"
+            5 to "V"
         )
-        if (numbers.contains(number)){
+        if (numbers.contains(number)) {
             return numbers.get(number)!!
         }
-        return "I" + convert(number-1)
+        if (number > 5) {
+            return "V" + convert(number - 5)
+        }
+        return "I" + convert(number - 1)
     }
 
 
