@@ -25,7 +25,8 @@ class RomanNumeralsShould {
         "100, C",
         "400, CD",
         "500, D",
-        "900, CM"
+        "900, CM",
+        "1000, M"
     )
     fun `return I for number 1`(number: Int, expectedValue: String){
         val converter = RomanNumerals()
