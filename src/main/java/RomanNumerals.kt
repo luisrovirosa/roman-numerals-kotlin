@@ -15,11 +15,8 @@ class RomanNumerals {
             4 to "IV",
             1 to "I"
         )
-        if (numbers.contains(number)) {
-            return numbers.get(number)!!
-        }
         for (i in numbers.keys){
-            if (number > i) {
+            if (number >= i) {
                 return numbers.get(i) + convert(number - i)
             }
         }
