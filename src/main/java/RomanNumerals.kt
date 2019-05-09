@@ -6,7 +6,10 @@ class RomanNumerals {
             3 to "III",
             4 to "IV"
         )
-        return numbers.getOrDefault(number, "")
+        if (numbers.contains(number)){
+            return numbers.get(number)!!
+        }
+        return ""
     }
 
 
