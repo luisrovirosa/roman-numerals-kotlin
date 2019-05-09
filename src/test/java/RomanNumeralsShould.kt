@@ -16,7 +16,8 @@ class RomanNumeralsShould {
         "9, IX",
         "10, X",
         "11, XI",
-        "12, XII"
+        "12, XII",
+        "13, XIII"
     )
     fun `return I for number 1`(number: Int, expectedValue: String){
         val converter = RomanNumerals()
