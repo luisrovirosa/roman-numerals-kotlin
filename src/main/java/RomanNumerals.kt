@@ -5,7 +5,8 @@ class RomanNumerals {
             4 to "IV",
             5 to "V",
             6 to "VI",
-            7 to "VII"
+            7 to "VII",
+            8 to "VIII"
         )
         if (numbers.contains(number)){
             return numbers.get(number)!!
