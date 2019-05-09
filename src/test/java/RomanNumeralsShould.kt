@@ -1,13 +1,17 @@
-import org.junit.jupiter.api.Test
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.CsvSource
 import kotlin.test.assertEquals
 
 class RomanNumeralsShould {
-    @Test
-    fun `return I for number 1`(){
-        val conversor = RomanNumerals()
+    @ParameterizedTest
+    @CsvSource(
+        "1, I"
+    )
+    fun `return I for number 1`(number: Int, expectedValue: String){
+        val converter = RomanNumerals()
 
-        val inRoman = conversor.convert(1)
+        val inRoman = converter.convert(number)
 
-        assertEquals("I", inRoman)
+        assertEquals(expectedValue, inRoman)
     }
 }
